@@ -10,6 +10,7 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@react-three/drei": "^9.80.0",
     "@react-three/fiber": "^8.13.6",
     "@types/node": "20.4.5",
