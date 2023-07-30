@@ -1,4 +1,4 @@
-export const textVariant = (delay: number) => {
+export const textVariant = (delay?: number) => {
   return {
     hidden: {
       y: -50,
@@ -86,8 +86,8 @@ export const slideIn = (
 };
 
 export const staggerContainer = (
-  staggerChildren: number,
-  delayChildren: number
+  staggerChildren?: number,
+  delayChildren?: number
 ) => {
   return {
     hidden: {},
