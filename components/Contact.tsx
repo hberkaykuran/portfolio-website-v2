@@ -23,10 +23,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_1q2q9qo",
-        "template_1q2q9qo",
+        "service_5eia9cz",
+        "template_m9clabb",
         formRef.current,
-        "user_1q2q9qo"
+        "w1SKan_9I_G2aCy45"
       )
 
       .then(
@@ -96,12 +96,12 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
-      <motion.div
+      {/* <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <EarthCanvas />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

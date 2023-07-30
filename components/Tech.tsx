@@ -1,16 +1,51 @@
 "use client";
 
 import { SectionWrapper } from "@/hoc";
-import { BallCanvas } from "./canvas";
 import { technologies } from "@/constants";
-const Tech = () => {
+
+import { motion } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
+import { fadeIn } from "@/utils/motion";
+
+const Row = ({
+  children,
+  direction,
+}: {
+  children: { name: string; icon: StaticImageData }[];
+  direction: "left" | "right";
+}) => {
   return (
-    <div className="flex flex-row flex-wrap justify-center gap-10">
-      {technologies.map((tech) => (
-        <div key={tech.name} className="w-28 h-28">
-          <BallCanvas icon={tech.icon} />
-        </div>
-      ))}
+    <motion.div
+      variants={fadeIn(direction, "tween", 0.2, 0.75)}
+      transition={{ duration: 0.5 }}
+      className={`flex flex-row flex-nowrap w-full gap-4 ${
+        direction !== "left" ? "justify-start" : "justify-end"
+      }`}
+    >
+      {children.map((tech) => {
+        return (
+          <div key={tech.name}>
+            <Image
+              src={tech.icon}
+              alt={tech.name}
+              className={`xl:h-32 lg:h-28 w-auto md:h-20 sm:h-16 h-12 rounded-full bg-black-100`}
+            />
+          </div>
+        );
+      })}
+    </motion.div>
+  );
+};
+
+const Tech = () => {
+  const halfLength = Math.ceil(technologies.length / 2);
+  const firstRowData = technologies.slice(0, halfLength);
+  const secondRowData = technologies.slice(halfLength);
+
+  return (
+    <div className={"w-full h-fit flex flex-col gap-8"}>
+      <Row direction={"left"}>{firstRowData}</Row>
+      <Row direction={"right"}>{secondRowData}</Row>
     </div>
   );
 };
