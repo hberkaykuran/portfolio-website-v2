@@ -21,8 +21,6 @@ const Navbar = () => {
     closed: { d: "M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" },
   };
   return (
-    // after scrolling down 100px, the navbar will change bg color, and have a backdrop blur
-    // get scroll position
     <nav
       className={`paddingX w-full flex items-center py-5 fixed top-0 z-10 bg-primary transition-all duration-300 ease-in-out
     ${scroll ? "backdrop-filter backdrop-blur-lg bg-tertiary/40" : ""}
