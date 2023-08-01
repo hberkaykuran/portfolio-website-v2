@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navLinks } from "@/constants";
 import { logo } from "@/public/assets";
 import Image from "next/image";
@@ -9,12 +9,25 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 75);
+    });
+  });
   const pathVariants = {
     open: { d: "M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" },
     closed: { d: "M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" },
   };
   return (
-    <nav className="paddingX w-full flex items-center py-5 fixed top-0 z-10 bg-primary">
+    // after scrolling down 100px, the navbar will change bg color, and have a backdrop blur
+    // get scroll position
+    <nav
+      className={`paddingX w-full flex items-center py-5 fixed top-0 z-10 bg-primary transition-all duration-300 ease-in-out
+    ${scroll ? "backdrop-filter backdrop-blur-lg bg-tertiary/40" : ""}
+    `}
+    >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <button
           className="flex items-center gap-2"
