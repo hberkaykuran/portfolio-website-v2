@@ -24,12 +24,25 @@ const Row = ({
     >
       {children.map((tech) => {
         return (
-          <div key={tech.name}>
+          <div
+            key={tech.name}
+            //shadow closer to bg color on hover (rgb(21 16 48))
+            className="relative group rounded-full bg-black-100
+            xl:p-[calc(8rem_*_0.41421356237_/_2)]
+            lg:p-[calc(7rem_*_0.41421356237_/_2)]
+            md:p-[calc(5rem_*_0.41421356237_/_2)]
+            sm:p-[calc(4rem_*_0.41421356237_/_2)]
+            p-[(calc(3rem_*_0.41421356237_/_2))]
+            hover:bg-tertiary hover:shadow-[0px_0px_20px_#151030]
+            transition-all duration-500 ease-in-out
+            "
+          >
             <Image
               src={tech.icon}
               alt={tech.name}
-              className={`xl:h-32 lg:h-28 w-auto md:h-20 sm:h-16 h-12 rounded-full bg-black-100`}
+              className="w-auto xl:h-32 lg:h-28 md:h-20 sm:h-16 h-12 object-contain"
             />
+            <div className="tooltip group-hover:opacity-100">{tech.name}</div>
           </div>
         );
       })}
@@ -43,7 +56,7 @@ const Tech = () => {
   const secondRowData = technologies.slice(halfLength);
 
   return (
-    <div className={"w-full h-fit flex flex-col gap-8"}>
+    <div className={"w-full h-fit flex flex-col gap-12"}>
       <Row direction={"left"}>{firstRowData}</Row>
       <Row direction={"right"}>{secondRowData}</Row>
     </div>

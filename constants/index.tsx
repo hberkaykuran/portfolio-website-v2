@@ -8,21 +8,15 @@ import {
   html,
   css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
-  mongodb,
   git,
   figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  nextjs,
+  graphql,
+  storybook,
   carrent,
   jobit,
-  tripguide,
-  threejs,
   crossover,
   bxld,
   gamcap,
@@ -84,36 +78,32 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Next JS",
+    icon: nextjs,
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
   },
   {
+    name: "Storybook",
+    icon: storybook,
+  },
+  {
+    name: "GraphQL",
+    icon: graphql,
+  },
+  {
     name: "Node JS",
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
-    name: "figma",
+    name: "Figma",
     icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
   },
 ];
 
@@ -184,67 +174,58 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Twitter Clone",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Web application developed with NextJs and TailwindCSS. Utilizes NextAuth for authentication, and Firebase for providers and database.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "nextjs",
         color: "green-text-gradient",
       },
       {
         name: "tailwind",
-        color: "pink-text-gradient",
+        color: "violet-text-gradient",
+      },
+      {
+        name: "firebase",
+        color: "orange-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/hberkaykuran/twitter-clone",
   },
   {
-    name: "Job IT",
+    name: "StS Tier List",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Card tierlist of the popular rogue-like deck-building game Slay the Spire. Uses the StS-API I developed to get cards and results, and submit votes.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "nextjs",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "typescript",
+        color: "violet-text-gradient",
+      },
+      {
+        name: "prisma",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "planetscale",
         color: "pink-text-gradient",
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/hberkaykuran/sts-tierlist",
   },
 ];
 

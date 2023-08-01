@@ -1,13 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { navLinks } from "@/constants";
-import { logo, menu, close } from "@/public/assets";
+import { logo } from "@/public/assets";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const pathVariants = {
+    open: { d: "M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" },
+    closed: { d: "M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" },
+  };
   return (
     <nav className="paddingX w-full flex items-center py-5 fixed top-0 z-10 bg-primary">
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
@@ -41,14 +46,24 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <Image
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
-            onClick={() => {
-              setToggle(!toggle);
-            }}
-          />
+          <button onClick={() => setToggle(!toggle)}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 10 10"
+              stroke="#eee"
+              strokeWidth=".6"
+              className="w-8 h-8"
+              strokeLinecap="round"
+              style={{ cursor: "pointer" }}
+            >
+              <motion.path
+                variants={pathVariants}
+                initial={false}
+                animate={toggle ? "open" : "closed"}
+                transition={{ duration: 0.2 }}
+              />
+            </svg>
+          </button>
           <div
             className={`${
               toggle ? "flex" : "hidden"
