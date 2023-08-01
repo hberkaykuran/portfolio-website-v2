@@ -1,7 +1,6 @@
 import {
   mobile,
   backend,
-  creator,
   web,
   javascript,
   typescript,
@@ -15,11 +14,11 @@ import {
   nextjs,
   graphql,
   storybook,
-  carrent,
-  jobit,
   crossover,
   bxld,
   gamcap,
+  twitterClone,
+  sts,
 } from "@/public/assets";
 
 export const navLinks = [
@@ -191,7 +190,7 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-    image: carrent,
+    image: twitterClone,
     source_code_link: "https://github.com/hberkaykuran/twitter-clone",
   },
   {
@@ -220,7 +219,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: sts,
     source_code_link: "https://github.com/hberkaykuran/sts-tierlist",
   },
 ];
