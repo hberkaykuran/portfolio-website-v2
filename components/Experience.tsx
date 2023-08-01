@@ -43,23 +43,12 @@ const ExperienceCard = ({
       }
     >
       <div>
-        <motion.h3
-          className="text-white text-[24px] font-bold"
-          whileHover={{ scale: 1.1 }}
-        >
-          {experience.title}
-        </motion.h3>
+        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
 
-        <motion.div
-          className="text-secondary text-[16px] font-semibold m-0"
-          whileHover={{ scale: 1.1 }}
-        >
+        <div className="text-secondary text-[16px] font-semibold m-0">
           {experience.company_name}
-        </motion.div>
-        <motion.ul
-          className="mt-5 list-disc ml-5 space-y-2"
-          whileHover={{ scale: 1.1 }}
-        >
+        </div>
+        <ul className="mt-5 list-disc ml-5 space-y-2">
           {experience.points.map((point, index) => (
             <li
               key={`experience-point-${index}`}
@@ -68,7 +57,7 @@ const ExperienceCard = ({
               {point}
             </li>
           ))}
-        </motion.ul>
+        </ul>
       </div>
     </VerticalTimelineElement>
   );

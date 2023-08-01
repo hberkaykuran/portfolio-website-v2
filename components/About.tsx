@@ -42,19 +42,21 @@ const About = () => {
       <motion.div variants={textVariant()}>
         <p className="sectionSubText">Introduction</p>
         <h2 className="sectionHeadText">Overview</h2>
-        <motion.p variants={fadeIn("", "", 0.1, 1)}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          voluptatum, quibusdam, quia, voluptates voluptate quod quos
-          reprehenderit quas voluptatibus quidem doloribus. Quisquam voluptatum,
-          quibusdam, quia, voluptates voluptate quod quos reprehenderit quas
-          voluptatibus quidem doloribus.
-        </motion.p>
-        <div className="mt-20 flex flex-wrap gap-10">
+      </motion.div>
+      <motion.p variants={fadeIn("", "", 0.1, 1)}>
+        I&apos;m a Fullstack Software Engineer with a passion for Frontend
+        Development. Skilled in React.JS, Next.JS, and TypeScript, I create
+        user-centric web applications. With a proactive mindset and startup
+        experience, I thrive in dynamic environments. Explore my portfolio to
+        see my projects and interests in software development!
+      </motion.p>
+      <div className="mt-20 flex justify-center">
+        <div className="flex flex-wrap gap-10">
           {services.map((service, index) => (
-            <ServiceCard key={index} index={index} {...service} />
+            <ServiceCard key={service.title} index={index} {...service} />
           ))}
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };

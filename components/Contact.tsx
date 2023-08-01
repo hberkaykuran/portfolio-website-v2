@@ -48,7 +48,7 @@ const Contact = () => {
         className="xl:flex-[0.5] flex-1 bg-black-100 p-8 rounded-2xl"
       >
         <p className="sectionSubText">Get in touch</p>
-        <h3 className="sectionHeadText">Contact.</h3>
+        <h3 className="sectionHeadText">Contact</h3>
         <form
           ref={formRef}
           onSubmit={handleFormSubmit}
