@@ -36,8 +36,10 @@ const ProjectCard = ({
             className="w-full h-full rounded-2xl object-cover"
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
+            <button
               onClick={() => window.open(source_code_link)}
+              key={source_code_link}
+              id={source_code_link}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
               <Image
@@ -45,7 +47,7 @@ const ProjectCard = ({
                 alt="github"
                 className="w-1/2 h-1/2 object-contain"
               />
-            </div>
+            </button>
           </div>
         </div>
         <div className="mt-5">
