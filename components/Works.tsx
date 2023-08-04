@@ -27,9 +27,9 @@ const ProjectCard = ({
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[400px] w-full h-full"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[350px] w-full h-full flex flex-col gap-5"
       >
-        <div className="relative w-full h-[230px]">
+        <div className="relative w-full h-[230px] shrink-0">
           <Image
             src={image}
             alt={name}
@@ -50,16 +50,18 @@ const ProjectCard = ({
             </button>
           </div>
         </div>
-        <div className="mt-5">
+        <div className="">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
-        <div className="mt-4 flex flex-wrap md:flex-nowrap gap-2">
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-              #{tag.name}{" "}
-            </p>
-          ))}
+        <div className="grow flex items-end">
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+                #{tag.name}{" "}
+              </p>
+            ))}
+          </div>
         </div>
       </Tilt>
     </motion.div>

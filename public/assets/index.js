@@ -23,6 +23,7 @@ import gamcap from './company/gamcap.jpeg';
 
 import sts from "./sts.png";
 import twitterClone from "./twitter-clone.png";
+import dataDashboard from "./dataDashboard.png";
 
 export {
   logo,
@@ -47,4 +48,5 @@ export {
   gamcap,
   sts,
   twitterClone,
+  dataDashboard
 };

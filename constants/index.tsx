@@ -19,6 +19,7 @@ import {
   gamcap,
   twitterClone,
   sts,
+  dataDashboard,
 } from "@/public/assets";
 
 export const navLinks = [
@@ -168,6 +169,31 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "Data Dashboard",
+    description:
+      "Data Dashboard is a frontend web application that showcases modern technologies for creating interactive data visualizations and management tools. While the app does not implement backend functionalities, it offers an engaging experience with mock data for charts and graphs.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nextjs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Material UI",
+        color: "violet-text-gradient",
+      },
+      {
+        name: "scss",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: dataDashboard,
+    source_code_link: "https://github.com/hberkaykuran/data-dashboard",
+  },
   {
     name: "Twitter Clone",
     description:
