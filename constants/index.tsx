@@ -128,15 +128,28 @@ const experiences = [
     ],
   },
   {
-    title: "Lead Frontend Developer",
+    title: "Frontend Developer",
     company_name: "GamCap Labs",
     icon: gamcap,
     iconBg: "#000",
-    date: "Jan 2023 - Present",
+    date: "January 2023 - September 2023",
     points: [
       "Pioneer of frontend development for Polya, leading the creation of a user-friendly, AI-assisted crypto terminal for data analytics, on-chain transactions, and understanding Web3.",
       "Crafted an interactive dashboard providing users with numerous data visualization options, and integrated features such as wallet connection using wagmi, query builder, and token analyzer.",
       "Worked closely with the backend team to ensure the flawless integration of all functionalities.",
+    ],
+  },
+  {
+    title: "Lead Frontend Engineer",
+    company_name: "GamCap Labs",
+    icon: gamcap,
+    iconBg: "#000",
+    date: "September 2023 - Present",
+    points: [
+      "Leading the development of Uniswap’s Liquidity Provider Widget, a React-based library, as part of a Uniswap Foundation Grant project.",
+      "Fully responsible for the project repository, including implementing Web3 hooks for Uniswap v4, frontend development, and setting up the npm package environment.",
+      "Managing project planning and blueprinting, as well as owning the development process, with a focus on TypeScript and React.",
+      "Collaborating with team members responsible for external data sources and other data-related aspects of the project.",
     ],
   },
 ];
@@ -144,26 +157,26 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.",
+    name: "Firstname Lastname",
+    designation: "Designation",
+    company: "Company",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.",
+    name: "Firstname Lastname",
+    designation: "Designation",
+    company: "Company",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.",
+    name: "Firstname Lastname",
+    designation: "Designation",
+    company: "Company",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
